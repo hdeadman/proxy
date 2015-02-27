@@ -1,10 +1,6 @@
 Module Description
 ====================
-Setup or Removes the Proxy configuration on Linux boxes
-
-This module depends on stdlib from puppetlabs to work: [https://github.com/puppetlabs/puppetlabs-stdlib](https://github.com/puppetlabs/puppetlabs-stdlib)
-In case you do not have access to internet (for obvious reasons, not setting the proxy yet :P ) You can take it from vendor directory (included here)
-and move to your modules directory:
+Manage the Proxy configuration on Linux boxes where tinyproxy (only http/https) is the proxy you are using
 
 
 Current OS Supported:
@@ -13,9 +9,6 @@ Current OS Supported:
     * centos, fedora, redhat, scientific linux
   * Debian based:
     * debian, ubuntu
-  * SuSE based:
-    * OpenSuSE/SLES/SLED
-
 
 Usage:
 ====================
@@ -31,10 +24,6 @@ More info: https://pypi.python.org/pypi/requests
             http_proxy_port  => "3128", 
             https_proxy_host =>  "http://myproxy.url.com", 
             https_proxy_port => "3128", 
-            socks_proxy_host =>  "socks://myproxy.url.com", 
-            socks_proxy_port => "3128", 
-            ftp_proxy_host   =>  "ftp://myproxy.url.com", 
-            ftp_proxy_port   => "3128", 
             no_proxy_domains => ".intel.com,.mylocalnet.com",
         }
     }
